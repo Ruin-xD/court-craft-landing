@@ -31,18 +31,20 @@ const App = () => {
           
           {isLoading && <Preloader onLoadingComplete={handleLoadingComplete} />}
           
-          <BrowserRouter>
-            <Layout>
-              <Routes>
+          <div className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+            <BrowserRouter>
+              <Layout>
+                <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/offices" element={<Offices />} />
                 <Route path="/about" element={<About />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Layout>
-          </BrowserRouter>
+                </Routes>
+              </Layout>
+            </BrowserRouter>
+          </div>
         </TooltipProvider>
       </ThemeProvider>
     </QueryClientProvider>

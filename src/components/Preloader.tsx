@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const basketballLogo = '/lovable-uploads/ec79b363-95a0-47df-939f-41bbc80380aa.png';
+const basketballLogo = '/lovable-uploads/f7a24124-4526-483b-8008-46164f1dd890.png';
 
 interface PreloaderProps {
   onLoadingComplete: () => void;
@@ -8,13 +8,15 @@ interface PreloaderProps {
 
 const Preloader = ({ onLoadingComplete }: PreloaderProps) => {
   const [progress, setProgress] = useState(0);
+  const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(timer);
-          setTimeout(() => onLoadingComplete(), 500);
+          setIsExiting(true);
+          setTimeout(() => onLoadingComplete(), 800);
           return 100;
         }
         return prev + 2;
@@ -25,8 +27,8 @@ const Preloader = ({ onLoadingComplete }: PreloaderProps) => {
   }, [onLoadingComplete]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-hero">
-      <div className="text-center">
+    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-gradient-hero transition-opacity duration-500 ${isExiting ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`text-center transition-all duration-500 ${isExiting ? 'scale-95 opacity-0' : 'scale-100 opacity-100'}`}>
         <div className="mb-8">
           <img
             src={basketballLogo}
