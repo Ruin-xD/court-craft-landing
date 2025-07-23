@@ -1,8 +1,9 @@
 import { ArrowRight, Award, Shield, Zap, Star, Users, Trophy, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import basketballLogo from '@/assets/basketball-logo.png';
 import heroCourt from '@/assets/hero-court.jpg';
+
+const basketballLogo = '/lovable-uploads/ec79b363-95a0-47df-939f-41bbc80380aa.png';
 
 const Index = () => {
   const features = [

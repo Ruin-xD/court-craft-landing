@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import basketballLogo from '@/assets/basketball-logo.png';
+
+const basketballLogo = '/lovable-uploads/ec79b363-95a0-47df-939f-41bbc80380aa.png';
 
 interface PreloaderProps {
   onLoadingComplete: () => void;

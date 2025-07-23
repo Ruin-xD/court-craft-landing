@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import basketballLogo from '@/assets/basketball-logo.png';
+
+const basketballLogo = '/lovable-uploads/ec79b363-95a0-47df-939f-41bbc80380aa.png';
 
 const Footer = () => {
   return (

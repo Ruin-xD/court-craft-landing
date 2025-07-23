@@ -3,7 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ThemeToggle from './ThemeToggle';
-import basketballLogo from '@/assets/basketball-logo.png';
+
+const basketballLogo = '/lovable-uploads/ec79b363-95a0-47df-939f-41bbc80380aa.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
