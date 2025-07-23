@@ -27,7 +27,7 @@ const Preloader = ({ onLoadingComplete }: PreloaderProps) => {
   }, [onLoadingComplete]);
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-gradient-hero transition-opacity duration-500 ${isExiting ? 'opacity-0' : 'opacity-100'}`}>
+    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-background transition-opacity duration-500 ${isExiting ? 'opacity-0' : 'opacity-100'}`}>
       <div className={`text-center transition-all duration-500 ${isExiting ? 'scale-95 opacity-0' : 'scale-100 opacity-100'}`}>
         <div className="mb-8">
           <img
@@ -38,18 +38,18 @@ const Preloader = ({ onLoadingComplete }: PreloaderProps) => {
         </div>
         
         <div className="mb-6">
-          <h1 className="text-4xl font-bold text-white mb-2">HoopCraft</h1>
-          <p className="text-xl text-white/80">Premium Basketball Manufacturing</p>
+          <h1 className="text-4xl font-bold text-foreground mb-2">HoopCraft</h1>
+          <p className="text-xl text-muted-foreground">Premium Basketball Manufacturing</p>
         </div>
 
         <div className="w-64 mx-auto">
-          <div className="w-full bg-white/20 rounded-full h-2 mb-2">
+          <div className="w-full bg-muted rounded-full h-2 mb-2">
             <div
-              className="bg-white h-2 rounded-full transition-all duration-300 ease-out"
+              className="bg-primary h-2 rounded-full transition-all duration-300 ease-out"
               style={{ width: `${progress}%` }}
             />
           </div>
-          <p className="text-white/60 text-sm">{progress}%</p>
+          <p className="text-muted-foreground text-sm">{progress}%</p>
         </div>
       </div>
     </div>
