@@ -70,7 +70,7 @@ const Index = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="mb-8 animate-fade-in-up">
-            <img src={basketballLogo} alt="HoopCraft" className="w-24 h-24 mx-auto mb-6 basketball-bounce" />
+            <img src={basketballLogo} alt="HoopCraft" className="w-24 h-24 mx-auto mb-6" />
           </div>
           
           <h1 className="text-6xl md:text-7xl font-bold mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
