@@ -91,7 +91,7 @@ const Index = () => {
             <Button className="btn-hero">
               Explore Products <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" className="btn-outline-premium text-white border-white hover:bg-white hover:text-black">
+            <Button variant="outline" className="btn-outline-premium text-primary border-primary hover:bg-primary hover:text-white">
               Watch Our Story
             </Button>
           </div>
